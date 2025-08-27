@@ -1,10 +1,11 @@
-object remera {
-  method nombre (){
+object remera{
+  method nombre(){
     return "remera"
   }
-  method color (){
+  method color(){
     return "rojo"
-  }
+    //rojo
+  } 
   method material(){
     return "lino"
   }
@@ -14,12 +15,12 @@ object remera {
   }
 }
 
-object pelota {
-  method nombre (){
+object pelota{
+  method nombre(){
     return "pelota"
   }
-  method color (){
-    return "parda"
+  method color(){
+    return "pardo"
   }
   method material(){
     return "cuero"
@@ -30,11 +31,11 @@ object pelota {
   } 
 }
 
-object biblioteca {
-  method nombre (){
+object biblioteca{
+  method nombre(){
     return "biblioteca"
   }
-  method color (){
+  method color(){
     return "verde"
   }
   method material(){
@@ -46,13 +47,13 @@ object biblioteca {
   } 
 }
 
-object muñeco {
+object muñeco{
   var peso = 0
 
-  method nombre (){
+  method nombre(){
     return "muñeco"
   }
-  method color (){
+  method color(){
     return "celeste"
   }
   method material(){
@@ -64,11 +65,11 @@ object muñeco {
   } 
 }
 
-object placaDeCobre {
+object placaDeCobre{
   var peso = 0
-  var color = ""
+  var color = "nada"
 
-  method nombre (){
+  method nombre(){
     return "placa de cobre"
   }
   method color (){
