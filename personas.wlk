@@ -2,13 +2,13 @@ import objetos.*
 import prueba.*
 
 object rosa {
-    method LeGusta(objeto) {
+    method leGusta(objeto) {
         return objeto.peso() <= 2000
     }
 
 }
 object estefania {
-    method LeGusta(objeto) {
+    method leGusta(objeto) {
         if (objeto.nombre() == "placa de cobre" && objeto.color() == "rojo") {
             return true
         } 
@@ -29,7 +29,7 @@ object estefania {
 
 
 object luisa {
-    method LeGusta(objeto) {
+    method leGusta(objeto) {
         if ((objeto.nombre() == "placa de cobre") || 
             (objeto.nombre() == "muñeco" && objeto.material() == "vidrio")) {
             return true
@@ -45,7 +45,7 @@ object luisa {
 un muñeco celeste, o una placa de cobre que pese 1500 gramos. 
 No le gusta la biblioteca ni la remera.*/
 object juan {
-    method LeGusta(objeto) {
+    method leGusta(objeto) {
         return (objeto.nombre() == "pelota") || 
         (objeto.nombre() == "muñeco" && objeto.color() == "celeste") || 
         (objeto.nombre() == "placa de cobre" && objeto.peso() == 1500)

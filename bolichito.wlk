@@ -15,11 +15,23 @@ object bolichito{
     }
 
     method esBrillante(objeto1, objeto2){
-        return (objeto1.color() == "rojo" && objeto2.color() == "rojo") ||
-               (objeto1.color() == "verde" && objeto2.color() == "verde") ||
+        return (objeto1.color() == "naranja" && objeto2.color() == "naranja") ||
+               (objeto1.color() == "naranja" && objeto2.color() == "verde") ||
+               (objeto1.color() == "naranja" && objeto2.color() == "rojo") ||
+               (objeto1.color() == "rojo" && objeto2.color() == "naranja") ||
                (objeto1.color() == "rojo" && objeto2.color() == "verde") ||
-               (objeto1.color() == "verde" && objeto2.color() == "rojo")
-    }
+               (objeto1.color() == "rojo" && objeto2.color() == "rojo") ||
+               (objeto1.color() == "verde" && objeto2.color() == "verde") ||
+               (objeto1.color() == "verde" && objeto2.color() == "rojo") ||
+               (objeto1.color() == "verde" && objeto2.color() == "naranja")
+}
+    /*       
+    method esBrillante(objeto1, objeto2){
+        var coloresBrillantes = ["rojo", "verde", "naranja"]
+        return (objeto1.color() == objeto2.color()) ||
+           (coloresBrillantes.contains(objeto1.color()) && coloresBrillantes.contains(objeto2.color()))
+    */        
+    
     method esMonocromatico(objeto1, objeto2){
         return (objeto1.color() == "celeste" && objeto2.color() == "celeste") ||
                (objeto1.color() == "pardo" && objeto2.color() == "pardo") ||
@@ -36,7 +48,10 @@ object bolichito{
     method puedeMejorar(){
         return not bolichito.estaEquilibrado() || bolichito.esMonocromatico(objetoVidriera, objetoMostrador)
     }
-    method puedeOfrecerleAlgo(persona){
+    method puedeOfrecerAlgoA(persona){
+        return persona.leGusta(objetoMostrador) ||
+               persona.leGusta(objetoVidriera)
+        /*
         if (persona.LeGusta(objetoVidriera)) {
             return true + objetoVidriera.nombre()
         } else if (persona.LeGusta(objetoMostrador)) {
@@ -44,5 +59,6 @@ object bolichito{
         } else {
             return false
         }
+        */
     }
 }

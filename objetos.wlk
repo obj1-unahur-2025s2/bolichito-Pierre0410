@@ -83,3 +83,64 @@ object placaDeCobre{
     return 1300
   } 
 }
+
+object arito{
+  method nombre(){
+    return "arito"
+  }
+  method color(){
+    return "celeste"
+  }
+  method material(){
+    return "cobre"
+  }
+
+  method peso(){
+    return 180
+  } 
+}
+
+object banquito{
+  var color = "naranja"
+  method nombre(){
+    return "banquito"
+  }
+  method color(){
+    return color
+  }
+  method material(){
+    return "madera"
+  }
+
+  method peso(){
+    return 1700
+  } 
+}
+
+object cajita {
+  var objeto = remera
+  method nombre(){
+    return "cajita"
+  }
+  method color(){
+    return "rojo"
+  }
+  method material(){
+    return "cobre"
+  }
+  method pesoTotal(){
+    return 400 + objeto.peso()
+  } 
+  method objetoNombre() {
+    return objeto.nombre()
+  }
+  method objetoColor() {
+    return objeto.color()
+  }
+  method objetoMaterial() {
+    return objeto.material()
+  }
+  method objetoPeso() {
+    return objeto.peso()
+  }
+}
