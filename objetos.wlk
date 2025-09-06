@@ -1,13 +1,13 @@
+
 object remera{
   method nombre(){
     return "remera"
   }
   method color(){
-    return "rojo"
-    //rojo
+    return rojo
   } 
   method material(){
-    return "lino"
+    return lino
   }
 
   method peso(){
@@ -20,10 +20,10 @@ object pelota{
     return "pelota"
   }
   method color(){
-    return "pardo"
+    return pardo
   }
   method material(){
-    return "cuero"
+    return cuero
   }
 
   method peso(){
@@ -36,10 +36,10 @@ object biblioteca{
     return "biblioteca"
   }
   method color(){
-    return "verde"
+    return verde
   }
   method material(){
-    return "madera"
+    return madera
   }
 
   method peso(){
@@ -54,10 +54,10 @@ object muñeco{
     return "muñeco"
   }
   method color(){
-    return "celeste"
+    return celeste
   }
   method material(){
-    return "vidrio"
+    return vidrio
   }
 
   method peso(){
@@ -67,7 +67,7 @@ object muñeco{
 
 object placaDeCobre{
   var peso = 0
-  var color = "nada"
+  var color = verde
 
   method nombre(){
     return "placa de cobre"
@@ -76,7 +76,7 @@ object placaDeCobre{
     return color
   }
   method material(){
-    return "cobre"
+    return cobre
   }
 
   method peso(){
@@ -89,10 +89,10 @@ object arito{
     return "arito"
   }
   method color(){
-    return "celeste"
+    return celeste
   }
   method material(){
-    return "cobre"
+    return cobre
   }
 
   method peso(){
@@ -101,7 +101,7 @@ object arito{
 }
 
 object banquito{
-  var color = "naranja"
+  var color = naranja
   method nombre(){
     return "banquito"
   }
@@ -109,7 +109,7 @@ object banquito{
     return color
   }
   method material(){
-    return "madera"
+    return madera
   }
 
   method peso(){
@@ -123,24 +123,95 @@ object cajita {
     return "cajita"
   }
   method color(){
-    return "rojo"
+    return rojo
   }
   method material(){
-    return "cobre"
+    return cobre
   }
   method pesoTotal(){
     return 400 + objeto.peso()
-  } 
-  method objetoNombre() {
-    return objeto.nombre()
   }
-  method objetoColor() {
-    return objeto.color()
-  }
-  method objetoMaterial() {
-    return objeto.material()
-  }
-  method objetoPeso() {
-    return objeto.peso()
-  }
+}
+//colores
+object rojo{
+    method nombre(){
+        return "rojo"
+    }
+    method esFuerte(){
+        return true
+    }
+}
+object verde{
+    method nombre(){
+        return "verde"
+    }
+    method esFuerte(){
+        return true
+    }
+}
+object celeste{
+    method nombre(){
+        return "celeste"
+    }
+    method esFuerte(){
+        return false
+    }
+}
+object pardo{
+    method nombre(){
+        return "pardo"
+    }
+    method esFuerte(){
+        return false
+    }
+}
+object naranja{
+    method nombre(){
+        return "naranja"
+    }
+    method esFuerte(){
+        return true
+    }
+}
+
+//materiales
+object cobre{
+    method nombre(){
+        return "cobre"
+    }
+    method esBrillante(){
+        return true
+    }
+}
+object vidrio{
+    method nombre(){
+        return "vidrio"
+    }
+    method esBrillante(){
+        return true
+    }
+}
+object lino{
+    method nombre(){
+        return "lino"
+    }
+    method esBrillante(){
+        return false
+    }
+}
+object madera{
+    method nombre(){
+        return "madera"
+    }
+    method esBrillante(){
+        return false
+    }
+}
+object cuero{
+    method nombre(){
+        return "cuero"
+    }
+    method esBrillante(){
+        return false
+    }
 }

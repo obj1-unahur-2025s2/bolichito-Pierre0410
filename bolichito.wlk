@@ -2,9 +2,46 @@ import objetos.*
 import personas.*
 import prueba.*
 
+
+/*
+colores fuertes: rojo, verde, naranja --- celeste, pardo
+materiales brillantes: cobre, vidrio --- lino, madera, cobre
+*/
 object bolichito{
     var objetoVidriera = remera
     var objetoMostrador = pelota
+
+    method esBrillante(objeto1, objeto2){
+        return objeto1.material().esBrillante() && objeto2.material().esBrillante()
+    }
+
+    method esMonocromatico(objeto1, objeto2){
+        return objeto1.color().esFuerte() && objeto2.color().esFuerte()
+    }
+    method estaEquilibrado(){
+            return objetoMostrador.peso() > objetoVidriera.peso()
+    }
+
+    method hayObjetoDeColor(color){
+        return objetoVidriera.color().nombre() == color || objetoMostrador.color().nombre() == color
+    }
+
+    method puedeMejorar(){
+        return not self.estaEquilibrado() || self.esMonocromatico(objetoVidriera, objetoMostrador)
+    }
+
+    method puedeOfrecerAlgoA(persona){
+        return persona.leGusta(objetoMostrador) ||
+               persona.leGusta(objetoVidriera)
+    }
+
+    method colocarObjetoVidriera(objeto){
+        objetoVidriera = objeto
+    }
+
+    method colocarObjetoMostrador(objeto){
+        objetoMostrador = objeto
+    }
 
     method objetoVidriera(){
         return objetoVidriera
@@ -14,51 +51,4 @@ object bolichito{
         return objetoMostrador
     }
 
-    method esBrillante(objeto1, objeto2){
-        return (objeto1.color() == "naranja" && objeto2.color() == "naranja") ||
-               (objeto1.color() == "naranja" && objeto2.color() == "verde") ||
-               (objeto1.color() == "naranja" && objeto2.color() == "rojo") ||
-               (objeto1.color() == "rojo" && objeto2.color() == "naranja") ||
-               (objeto1.color() == "rojo" && objeto2.color() == "verde") ||
-               (objeto1.color() == "rojo" && objeto2.color() == "rojo") ||
-               (objeto1.color() == "verde" && objeto2.color() == "verde") ||
-               (objeto1.color() == "verde" && objeto2.color() == "rojo") ||
-               (objeto1.color() == "verde" && objeto2.color() == "naranja")
-}
-    /*       
-    method esBrillante(objeto1, objeto2){
-        var coloresBrillantes = ["rojo", "verde", "naranja"]
-        return (objeto1.color() == objeto2.color()) ||
-           (coloresBrillantes.contains(objeto1.color()) && coloresBrillantes.contains(objeto2.color()))
-    */        
-    
-    method esMonocromatico(objeto1, objeto2){
-        return (objeto1.color() == "celeste" && objeto2.color() == "celeste") ||
-               (objeto1.color() == "pardo" && objeto2.color() == "pardo") ||
-               (objeto1.color() == "pardo" && objeto2.color() == "celeste") ||
-               (objeto1.color() == "celeste" && objeto2.color() == "pardo")
-    }
-    
-    method estaEquilibrado(){
-            return objetoMostrador.peso() > objetoVidriera.peso()
-    }
-    method hayObjetoDeColor(color){
-        return objetoVidriera.color() == color || objetoMostrador.color() == color
-    }
-    method puedeMejorar(){
-        return not bolichito.estaEquilibrado() || bolichito.esMonocromatico(objetoVidriera, objetoMostrador)
-    }
-    method puedeOfrecerAlgoA(persona){
-        return persona.leGusta(objetoMostrador) ||
-               persona.leGusta(objetoVidriera)
-        /*
-        if (persona.LeGusta(objetoVidriera)) {
-            return true + objetoVidriera.nombre()
-        } else if (persona.LeGusta(objetoMostrador)) {
-            return true + objetoMostrador.nombre()
-        } else {
-            return false
-        }
-        */
-    }
 }
