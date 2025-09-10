@@ -20,7 +20,7 @@ object pelota{
     return "pelota"
   }
   method color(){
-    return pardo
+    return verde
   }
   method material(){
     return cuero

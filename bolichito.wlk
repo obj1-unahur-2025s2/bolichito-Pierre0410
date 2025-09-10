@@ -11,12 +11,12 @@ object bolichito{
     var objetoVidriera = remera
     var objetoMostrador = pelota
 
-    method esBrillante(objeto1, objeto2){
-        return objeto1.material().esBrillante() && objeto2.material().esBrillante()
-    }
 
-    method esMonocromatico(objeto1, objeto2){
-        return objeto1.color().esFuerte() && objeto2.color().esFuerte()
+    method esMonocromatico(){
+        return objetoVidriera.color().esFuerte() && objetoMostrador.color().esFuerte()
+    }
+    method esBrillante(){
+        return objetoVidriera.material().esBrillante() && objetoMostrador.material().esBrillante()
     }
     method estaEquilibrado(){
             return objetoMostrador.peso() > objetoVidriera.peso()
@@ -27,7 +27,7 @@ object bolichito{
     }
 
     method puedeMejorar(){
-        return not self.estaEquilibrado() || self.esMonocromatico(objetoVidriera, objetoMostrador)
+        return not self.estaEquilibrado() || self.esMonocromatico()
     }
 
     method puedeOfrecerAlgoA(persona){
